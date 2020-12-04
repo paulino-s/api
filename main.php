@@ -50,7 +50,7 @@
 						<td>'.$row['dirusuped'].'</td>
 						<td>'.$row['telusuped'].'</td>
 						<td class="td-option">
-							<button class="btn btn-danger" onclick="despachado('.$row['codped'].')">Despachado</button>
+							<button class="btn btn-danger" onclick="despachado('.$row['codped'].')">Entregado</button>
 						</td>
 					</tr>';
 						}
