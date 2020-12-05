@@ -53,7 +53,7 @@ include('conexion/conexion.php');
 						<th>Nombre</th>
 						<th>Descripción</th>
 						<th>Precio</th>
-						<th class="td-option">Opciones</th>
+						<!-- <th class="td-option">Opciones</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -67,15 +67,17 @@ include('conexion/conexion.php');
 						<td>' . $row['nompro'] . '</td>
 						<td>' . $row['despro'] . '</td>
 						<td>' . $row['prepro'] . '</td>
-						<td class="td-option">
+					</tr>';
+					}
+					?>
+					<!-- Botones editar y eliminar-->
+						<!-- <td class="td-option">
 							<div class="div-flex div-td-button">
 								<button class="btn btn-primary"><i class="far fa-edit" aria-hidden="true"></i></button>
 								<button class="btn btn-primary"><i class="far fa-trash-alt" aria-hidden="true"></i></button>
 							</div>
 						</td>
-					</tr>';
-					}
-					?>
+ -->
 				</tbody>
 			</table>
 			<button class="btn btn-primary btn-lg" onclick="show_modal('modal-producto')">Agregar nuevo</button>

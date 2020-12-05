@@ -31,13 +31,13 @@
 				<tbody>
 					<?php
 						$sql="SELECT ped.*,usu.*,pro.*,
-						CASE WHEN ped.estado=2 THEN 'Pendiente' ELSE 'Otro' END estadotexto
+						CASE WHEN ped.estado=1 THEN 'Pendiente' ELSE 'Otro' END estadotexto
 						from pedido ped
 						inner  join usuario usu
 						on ped.codusu=usu.codusu
 						inner  join producto pro
 						on ped.codpro=pro.codpro
-						where ped.estado=2";
+						where ped.estado=1";
 						$resultado=mysqli_query($con,$sql);
 						while ($row=mysqli_fetch_array($resultado)) {
 							echo 
@@ -50,7 +50,7 @@
 						<td>'.$row['dirusuped'].'</td>
 						<td>'.$row['telusuped'].'</td>
 						<td class="td-option">
-							<button class="btn btn-danger" onclick="despachado('.$row['codped'].')">Entregado</button>
+							<button class="btn btn-danger" onclick="despachado('.$row['codped'].')">Por Entregar</button>
 						</td>
 					</tr>';
 						}
